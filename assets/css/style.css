@@ -1,0 +1,50 @@
+body {
+    background-color: #D5F3E7;
+    font-family: 'Oswald', sans-serif;
+}
+
+.cabecalho{
+    display: flex;
+    margin: 0 0 15px 0;
+    padding:5px;
+    align-items: center;
+    background-color: #254E70;
+    color: #fff;
+}
+
+.cabecalho h1{
+    width: 100%; 
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.divNotas{
+    display: flexbox;
+    align-items: center;
+    width: 100%;
+    padding:30px;
+    margin-left: 10px;
+    max-width: 300px;
+    
+    border-radius: 5%;
+    background-color: #254E70;
+}
+
+.divNotas td{
+    width: 100px;
+    height: 50px;
+}
+
+.divNotas td p{
+    color: white;
+}
+
+.divNotas td .tdBotao {
+    display: flex;
+    align-items: center;
+}
+
+.divMeta {
+    display: inline;
+}
