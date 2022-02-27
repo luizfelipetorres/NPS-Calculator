@@ -9,80 +9,6 @@
         
         <script type="text/javascript" src="./assets/js/script.js"></script>
     </head>
-<!-- Trechos em VBSCRIPT. Não serão mais usados
-   <script language="vbscript">
-      Horizontal = 400
-      Vertical = 400
-      window.Resizeto Horizontal, vertical
-      
-      function fcCalcular()
-      
-           IF DET.VALUE = "" THEN
-              DET.VALUE = 0
-           END IF
-           IF NEUT.VALUE = "" THEN
-              NEUT.VALUE = 0
-           END IF
-           IF PRO.VALUE = "" THEN
-              PRO.VALUE = 0
-           END IF
-
-           IF (NEUT.VALUE = 0) and (DET.VALUE = 0) and (PRO.VALUE = 0) then
-              TOT.value = 0
-              NPS.value = 0
-              ZONA.value = ""
-           else
-
-               TOT.value = (DET.value * 1) + (NEUT.value * 1) + (PRO.value * 1)
-               NPS.value = FormatNumber((((PRO.value * 1)/TOT.value)-((DET.value * 1)/TOT.value))*100,2)
-               metaNPS = (((PRO.value * 1)/TOT.value)-((DET.value * 1)/TOT.value))*100
-               metaPRO =  PRO.value * 1
-               metaDET = DET.value * 1
-               metaNEUT = NEUT.value * 1
-               metaTOT = metaNEUT + metaDET + metaPRO
-               
-               'Meta
-               IF met.VALUE <> "" THEN
-                   if metaNPS < (MET.value * 1) then
-                       do while metaNPS < (MET.value * 1)
-                           metaPRO = metaPRO + 1
-                           metaTOT = metaNEUT + metaDET + metaPRO
-                           metaNPS = (((metaPRO * 1)/metaTOT)-((metaDET * 1)/metaTOT))*100
-                       loop
-                       msgbox "Voc� precisa de " & metaPRO - (PRO.value * 1)& " promotoras (totalizando " & metaPRO & ") pra chegar na meta",vbInformation, "Meta NPS"
-                   else
-                       msgbox "Parab�ns! Voc� j� alcan�ou a sua meta! =D", vbInformation, "Meta Atingida"
-                   end if
-               END IF
-       
-             'Zonas NPS
-               IF NPS.value >= 75 then
-                   ZONA.value = "Zona de Excel�ncia"
-               else
-                   IF NPS.value >= 50 then
-                       ZONA.value = "Zona de Qualidade"
-                   ELSE
-                       IF NPS.value >= 0 then
-                           ZONA.value = "Zona de Aperfei�oamento"
-                       ELSE
-                           ZONA.value = "Zona Cr�tica"
-                       END IF
-                   END IF                  
-               end if
-           end if
-      end function
-      
-      function fcDet()
-          DET.VALUE = ""
-      end function
-      function fcNeut()
-          NEUT.VALUE = ""
-      end function
-      function fcPro()
-          PRO.VALUE = ""
-      end function
-   </script>
--->
    <body>
     <!--
         Estrutura:
@@ -95,69 +21,57 @@
 
         <!--Cabeçalho-->
         <header class="cabecalho">
-            <h1>Calcucladora NPS!</h1>
+            <h1>Calculadora - NPS!</h1>
         </header>
         
-        <!--Bloco esquerdo (Notas)-->
-        <div class="divNotas">
-            <table>
-                <tr>
-                    <td class="tdLabel">
-                        <p>Detratoras:</p>
-                    </td>
-                    <td>
-                        <input type=textbox class="caixas caixaDET" value=0 size=5 onclick="fcDet">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tdLabel">
-                        <p>Neutras:</p>
-                    </td>
-                    <td>
-                        <input type=textbox class="caixas caixaNEUT" value=0 size=5 onclick="fcNeut">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tdLabel">
-                        <p>Promotoras:</p>
-                    </td>
-                    <td>
-                        <input type=textbox class="caixas caixaPRO" value=0 size=5 onclick="fcPro">
-                    </td>
-                </tr>
-                <tr>
-                    <td id="tdBotao" colspan="2">
-                        <input type=button value="Calcular" ID="btCalcular" onclick="fcCalcular">
-                    </td>
-                </tr>
-            </table>
+        <div class="container">
+
+            <!--Bloco esquerdo (Notas)-->
+            <div class="box">
+                <h2 class="titleBox">Digite suas notas</h2>
+
+                <p class="pLabels">Detratoras:</p>
+                <input type="textbox" class="caixas caixaDET" value="0" size="5">
+                
+                <p class="pLabels">Neutras:</p>
+                <input type="textbox" class="caixas caixaNEUT" value="0" size="5">
+                
+                <p class="pLabels">Promotoras:</p>
+                <input type="textbox" class="caixas caixaPRO" value="0" size="5">
+                
+                <input type="button" value="Calcular" id="btCalcular">
+            </div>
+
+            <!--Bloco direito (Meta)-->
+
+            <div class="box">
+                <div id="ckbox">
+                    <input type="checkbox" class="">
+                    <p class="pLabels">Incluir meta?</p>
+                </div>
+
+                <p class="pLabels">META:</p>
+                <input type="textbox" class="caixas" value="" size="5">
+
+            </div>
+
+
+            <!--Bloco inferior (Resultados)-->
+
+            <div class="box">
+
+                <p class="pLabels">Total:</p>
+                <input type="textbox" class="caixas caixasBLOCK" value="" size="5">
         
+                <p class="pLabels">NPS:</p>
+                <input type="textbox" class="caixas caixasBLOCK" value="" size="5">
+        
+                <p class="pLabels">ZONA:</p>
+                <input type="textbox" class="caixas caixasBLOCK" value="" size="28">
+            </div>
         </div>
 
-        <!--Bloco direito (Meta)-->
-
-        <div class="divMeta">
-
-            <p>META:</p>
-            <input type=textbox class="caixas" value="" size=5>
-
-        </div>
-
-
-        <!--Bloco inferior (Resultados)-->
-
-        <div class="divResultados">
-
-            <p>Total:</p>
-            <input type=textbox class="caixas caixasBLOCK" value="" size=5>
-    
-            <p>NPS:</p>
-            <input type=textbox class="caixas caixasBLOCK" value="" size=5>
-    
-            <p>ZONA:</p>
-            <input type=textbox class="caixas caixasBLOCK" value="" size=28>
-        </div>
-
+        <!--Rodapé-->
         <footer>
             <p>v 0.1</p>
         </footer>
