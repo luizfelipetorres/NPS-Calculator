@@ -19,41 +19,51 @@ body {
     text-align: center;
 }
 
-.divNotas{
+.infobox{
     display: flexbox;
-    align-items: center;
     width: 100%;
     max-width: 300px;
+    min-height: 250;
     padding:30px;
     margin: 30px;
     
     border-radius: 5%;
     background-color: #254E70;
     box-shadow: 1px 1px 10px black;
+    transition: all 0.5s;
 }
 
+.infobox:hover{
 
+}
 
-.divNotas input{
+.infobox .title_table h2{
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+}
+
+.infobox .sombra{
+    box-shadow: 1px 1px 10px black;
+}
+
+.infobox input{
     text-align: center;
     width: 100%;
     border: none;
     border-radius: 20%;
-    box-shadow: 1px 1px 10px black;
 }
 
-.divNotas td{
+.infobox td{
     width: 100px;
     height: 35px;
 }
 
-.divNotas td p{
+.infobox td p{
     color: white;
     text-align: left;
-}
-
-#tdBotao {
-    column-span: 2;
 }
 
 #tdBotao input{
@@ -65,6 +75,12 @@ body {
     border-radius: 10%;
 }
 
-.divMeta {
-    display: inline;
+.infobox .tdCbMeta{
+    display: flex;
+    width: 100%;
+}
+
+.infobox .tdCbMeta label{
+    width: 100%;
+    background-color: red;
 }

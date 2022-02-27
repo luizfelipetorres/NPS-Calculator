@@ -1,8 +1,9 @@
-   <html>
+<!DOCTYPE html>
+<html lang="pt-BR">
    <head>
        <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
        <link rel="stylesheet" href="./assets/css/style.css">
-        <title> Calculadora NPS - Calcule suas notas! </title>
+        <title> Calculadora - NPS - Calcule suas notas! </title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
@@ -95,69 +96,103 @@
 
         <!--Cabeçalho-->
         <header class="cabecalho">
-            <h1>Calcucladora NPS!</h1>
+            <h1>Calcucladora - NPS!</h1>
         </header>
         
         <!--Bloco esquerdo (Notas)-->
-        <div class="divNotas">
-            <table>
-                <tr>
-                    <td class="tdLabel">
-                        <p>Detratoras:</p>
-                    </td>
-                    <td>
-                        <input type=textbox class="caixas caixaDET" value=0 size=5 onclick="fcDet">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tdLabel">
-                        <p>Neutras:</p>
-                    </td>
-                    <td>
-                        <input type=textbox class="caixas caixaNEUT" value=0 size=5 onclick="fcNeut">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tdLabel">
-                        <p>Promotoras:</p>
-                    </td>
-                    <td>
-                        <input type=textbox class="caixas caixaPRO" value=0 size=5 onclick="fcPro">
-                    </td>
-                </tr>
-                <tr>
-                    <td id="tdBotao" colspan="2">
-                        <input type=button value="Calcular" ID="btCalcular" onclick="fcCalcular">
-                    </td>
-                </tr>
-            </table>
+        <table>
+            <tr>
+                <td>
+                    <div class="infobox">
+                        <table>
+                            <tr>
+                                <td class="title_table" colspan="2">
+                                    <h2>Digite suas notas</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdLabel">
+                                    <p>Detratoras:</p>
+                                </td>
+                                <td>
+                                    <input type=textbox class="sombra caixaDET" value=0 size=5 onclick="fcDet">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdLabel">
+                                    <p>Neutras:</p>
+                                </td>
+                                <td>
+                                    <input type=textbox class="sombra caixaNEUT" value=0 size=5 onclick="fcNeut">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdLabel">
+                                    <p>Promotoras:</p>
+                                </td>
+                                <td>
+                                    <input type=textbox class="sombra caixaPRO" value=0 size=5 onclick="fcPro">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="tdBotao" colspan="2">
+                                    <input type=button value="Calcular" ID="btCalcular" onclick="fcCalcular">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+                <td>
+                    <!--Div direita-->
+                    <div class="infobox">
+                        <table>
+                            <tr>
+                                <td class="tdCbMeta" colspan="2">
+                                    <input type="checkbox" name="cbMeta">
+                                    <label for="cbMeta">Calcular meta</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>META:</p>
+                                </td>
+                                <td>
+                                    <input type=textbox class="sombra" value="" size=5>
+                                </td>
+                            </tr>
+                        </table>
+            
+                    </div>
+            
+            
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <!--Div inferior-->
+                    <div class="infobox">
+
+                        <p>Total:</p>
+                        <input type=textbox class="sombra sombraBLOCK" value="" size=5>
+                
+                        <p>NPS:</p>
+                        <input type=textbox class="sombra sombraBLOCK" value="" size=5>
+                
+                        <p>ZONA:</p>
+                        <input type=textbox class="sombra sombraBLOCK" value="" size=28>
+                    </div>
+            
+                </td>
+            </tr>
+        </table>
         
-        </div>
 
         <!--Bloco direito (Meta)-->
-
-        <div class="divMeta">
-
-            <p>META:</p>
-            <input type=textbox class="caixas" value="" size=5>
-
-        </div>
 
 
         <!--Bloco inferior (Resultados)-->
 
-        <div class="divResultados">
-
-            <p>Total:</p>
-            <input type=textbox class="caixas caixasBLOCK" value="" size=5>
-    
-            <p>NPS:</p>
-            <input type=textbox class="caixas caixasBLOCK" value="" size=5>
-    
-            <p>ZONA:</p>
-            <input type=textbox class="caixas caixasBLOCK" value="" size=28>
-        </div>
-
+        
         <footer>
             <p>v 0.1</p>
         </footer>
