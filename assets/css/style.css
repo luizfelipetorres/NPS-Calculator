@@ -42,11 +42,13 @@ body {
     box-shadow: 1px 1px 10px black;
 }
 
-.box .titleBox {
+.titleBox {
     color: white;
     font-size: 20px;
     margin-bottom: 15px;
-
+    width: 100%;
+    text-align: center;
+    
 }
 
 .text-white {
