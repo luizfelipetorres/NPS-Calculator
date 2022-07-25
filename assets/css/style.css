@@ -1,105 +1,107 @@
 body {
     background-color: #D5F3E7;
     font-family: 'Oswald', sans-serif;
+    margin: auto;
 }
 
-.cabecalho{
+.cabecalho {
     display: flex;
     margin: 0 0 15px 0;
-    padding:5px;
+    padding: 5px;
     align-items: center;
     background-color: #254E70;
     color: #fff;
 }
 
-.cabecalho h1{
-    width: 100%; 
+.cabecalho h1 {
+    width: 100%;
     font-size: 50px;
     font-weight: bolder;
     text-align: center;
 }
 
-.container{
+.container {
     display: flex;
     position: relative;
-    width: 800px;
+    min-width: 350px;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
     flex-wrap: wrap;
-    
 }
 
-
-
-.box{
+.box {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 300px;
-    padding:30px;
+    padding: 30px;
     margin: 30px;
     border-radius: 5%;
     background-color: #254E70;
     box-shadow: 1px 1px 10px black;
 }
 
-.box .titleBox{
+.box .titleBox {
     color: white;
     font-size: 20px;
     margin-bottom: 15px;
 
 }
 
-.box .pLabels{
+.text-white {
     color: white;
-    width:45%;
-    margin-bottom: 15px;
 }
 
-.box .caixas{
+input[type="textbox"] {
     width: 45%;
+    height: 20px;
     margin-bottom: 15px;
-}
-
-
-.box input{
-    text-align: center;
-    width: 100%;
-    border: none;
-    border-radius: 20%;
     box-shadow: 1px 1px 10px black;
+    border-radius: 20%;
+    text-align: center;
 }
 
-.box #btCalcular{
+label[for="cbMeta"] {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.box .double-column {
+    width: 45%;
+    border: none;
+}
+
+.box #btCalcular {
     font-size: 20px;
     font-weight: bolder;
     height: 30px;
     margin-top: 15px;
     transition: 0;
     cursor: pointer;
+    border-radius: 20%;
+    border: none;
 }
 
-.box #btCalcular:hover{
+.box #btCalcular:hover {
     border: 3px solid #254E70;
-    
+
 }
 
-#ckbox{
-    
+.ckbox {
+    top: 0;
+    left: 0;
+    max-height: 25px;
+    max-width: 25px;
 }
 
-footer{
+footer {
     position: fixed;
     bottom: 0;
     text-align: center;
     width: 100%;
-    
+
     color: white;
     background-color: #254E70;
 }
-
-input[type="checkbox"]{
-    
-}
-

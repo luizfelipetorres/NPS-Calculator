@@ -1,15 +1,17 @@
-   <html>
-   <head>
-       <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
-       <link rel="stylesheet" href="./assets/css/style.css">
-        <title> Calculadora NPS - Calcule suas notas! </title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
-        
-        <script type="text/javascript" src="./assets/js/script.js"></script>
-    </head>
-   <body>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title> Calculadora NPS - Calcule suas notas! </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+</head>
+
+<body>
     <!--
         Estrutura:
             -Cabeçalho
@@ -17,63 +19,65 @@
             -BLoco direito
             -BLoco infeior
             -Rodapé
-    -->   
+    -->
 
-        <!--Cabeçalho-->
-        <header class="cabecalho">
-            <h1>Calculadora - NPS!</h1>
-        </header>
-        
-        <div class="container">
+    <!--Cabeçalho-->
+    <header class="cabecalho">
+        <h1>Calculadora - NPS!</h1>
+    </header>
 
-            <!--Bloco esquerdo (Notas)-->
-            <div class="box">
-                <h2 class="titleBox">Digite suas notas</h2>
+    <div class="container">
 
-                <p class="pLabels">Detratoras:</p>
-                <input type="textbox" class="caixas caixaDET" value="0" size="5">
-                
-                <p class="pLabels">Neutras:</p>
-                <input type="textbox" class="caixas caixaNEUT" value="0" size="5">
-                
-                <p class="pLabels">Promotoras:</p>
-                <input type="textbox" class="caixas caixaPRO" value="0" size="5">
-                
-                <input type="button" value="Calcular" id="btCalcular">
-            </div>
+        <!--Bloco esquerdo (Notas)-->
+        <div class="box">
+            <h2 class="titleBox">Digite suas notas</h2>
 
-            <!--Bloco direito (Meta)-->
+            <p class="text-white double-column">Detratoras:</p>
+            <input type="textbox" class=" caixaDET double-column" value="0" size="5">
 
-            <div class="box">
-                <div id="ckbox">
-                    <input type="checkbox" class="">
-                    <p class="pLabels">Incluir meta?</p>
-                </div>
+            <p class="text-white double-column">Neutras:</p>
+            <input type="textbox" class=" caixaNEUT double-column" value="0" size="5">
 
-                <p class="pLabels">META:</p>
-                <input type="textbox" class="caixas" value="" size="5">
+            <p class="text-white double-column">Promotoras:</p>
+            <input type="textbox" class=" caixaPRO double-column" value="0" size="5">
 
-            </div>
-
-
-            <!--Bloco inferior (Resultados)-->
-
-            <div class="box">
-
-                <p class="pLabels">Total:</p>
-                <input type="textbox" class="caixas caixasBLOCK" value="" size="5">
-        
-                <p class="pLabels">NPS:</p>
-                <input type="textbox" class="caixas caixasBLOCK" value="" size="5">
-        
-                <p class="pLabels">ZONA:</p>
-                <input type="textbox" class="caixas caixasBLOCK" value="" size="28">
-            </div>
+            <input type="button" value="Calcular" id="btCalcular">
         </div>
 
-        <!--Rodapé-->
-        <footer>
-            <p>v 0.1</p>
-        </footer>
-   </body>
-   </html>
+        <!--Bloco direito (Meta)-->
+
+        <div class="box">
+
+            <label for="cbMeta" class="text-white">
+                <input type="checkbox" id="cbMeta">
+                <span class="text-white">Calcular meta?</span>
+            </label>
+
+            <p class="text-white double-column">META:</p>
+            <input type="textbox" class="" value="" size="5">
+
+        </div>
+
+
+        <!--Bloco inferior (Resultados)-->
+
+        <div class="box">
+
+            <p class="text-white double-column">Total:</p>
+            <input type="textbox" class="double-column" value="" size="5">
+
+            <p class="text-white double-column">NPS:</p>
+            <input type="textbox" class="double-column" value="" size="5">
+
+            <p class="text-white double-column">ZONA:</p>
+            <input type="textbox" class="double-column" value="" size="28">
+        </div>
+    </div>
+
+    <!--Rodapé-->
+    <footer>
+        <p>v 0.1</p>
+    </footer>
+</body>
+
+</html>
