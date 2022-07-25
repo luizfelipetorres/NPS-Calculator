@@ -14,24 +14,13 @@
 </head>
 
 <body>
-    <!--
-        Estrutura:
-            -Cabeçalho
-            -Bloco esquerdo
-            -BLoco direito
-            -BLoco infeior
-            -Rodapé
-    -->
-
-    <!--Cabeçalho-->
     <header class="cabecalho">
         <h1>Calculadora - NPS!</h1>
     </header>
 
-    <div class="container">
+    <main class="container">
 
-        <!--Bloco esquerdo (Notas)-->
-        <div class="box">
+        <section class="box">
             <h2 class="titleBox">Digite suas notas</h2>
 
             <p class="text-white double-column">Detratoras:</p>
@@ -43,13 +32,8 @@
             <p class="text-white double-column">Promotoras:</p>
             <input type="textbox" class=" caixaPRO double-column" value="0" size="5">
 
-            <input type="button" value="Calcular" id="btCalcular">
-        </div>
 
-        <!--Bloco direito (Meta)-->
-
-        <div class="box">
-
+            <!-- meta -->
             <label for="cbMeta" class="text-white">
                 <input type="checkbox" id="cbMeta">
                 <span class="text-white">Calcular meta?</span>
@@ -58,12 +42,14 @@
             <p class="text-white double-column">META:</p>
             <input type="textbox" class="" value="" size="5">
 
-        </div>
+            <input type="button" value="Calcular" id="btCalcular">
+        </section>
 
 
         <!--Bloco inferior (Resultados)-->
 
-        <div class="box">
+        <section class="box">
+            <h2 class="titleBox">Resultados</h2>
 
             <p class="text-white double-column">Total:</p>
             <input type="textbox" class="double-column" value="" size="5">
