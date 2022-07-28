@@ -4,6 +4,7 @@ body {
     margin: auto;
 }
 
+
 .cabecalho {
     display: flex;
     margin: 0 0 15px 0;
@@ -48,7 +49,6 @@ body {
     margin-bottom: 15px;
     width: 100%;
     text-align: center;
-    
 }
 
 .text-white {
@@ -88,7 +88,6 @@ label[for="cbMeta"] {
 
 .box #btCalcular:hover {
     border: 3px solid #254E70;
-
 }
 
 .ckbox {
@@ -96,6 +95,12 @@ label[for="cbMeta"] {
     left: 0;
     max-height: 25px;
     max-width: 25px;
+}
+
+.meta-values {
+    display: none; /* TODO: ao clicar no checkbox, alterar para flex */
+    width: 100%;
+    justify-content: space-around;
 }
 
 footer {
