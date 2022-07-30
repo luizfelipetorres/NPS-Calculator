@@ -55,6 +55,7 @@ body {
     color: white;
 }
 
+input[type="number"],
 input[type="textbox"] {
     width: 45%;
     height: 20px;
@@ -97,19 +98,24 @@ label[for="cbMeta"] {
     max-width: 25px;
 }
 
-.meta-values {
-    display: none; /* TODO: ao clicar no checkbox, alterar para flex */
+#meta-values {
+    display: none;
+    /* TODO: ao clicar no checkbox, alterar para flex */
     width: 100%;
     justify-content: space-around;
 }
 
 footer {
     position: fixed;
+    display: flex;
     left: 0;
     bottom: 0;
     width: 100%;
+    min-height: 5%;
     color: white;
     background-color: #254E70;
     margin: 0;
     text-align: center;
+    justify-content: space-around;
+    align-items: center;
 }
