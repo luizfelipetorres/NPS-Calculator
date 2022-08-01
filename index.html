@@ -40,7 +40,7 @@
 
             <section id="meta-values">
                 <p class="text-white double-column">META:</p>
-                <input type="number" class="double-column" value="" size="5">
+                <input id="meta-value" type="number" class="double-column" value="" size="5" step="5" max="100" min="-100">
             </section>
 
             <input type="button" value="Calcular" id="btCalcular" onclick="calcular()">
@@ -49,17 +49,17 @@
 
         <!--Bloco inferior (Resultados)-->
 
-        <section class="box">
+        <section class="box resultados">
             <h2 class="titleBox">Resultados</h2>
 
             <p class="text-white double-column">Total:</p>
-            <input type="textbox" class="double-column" value="" size="5">
+            <input id="resultados-total" type="textbox" class="double-column" value="" size="5" readonly>
 
             <p class="text-white double-column">NPS:</p>
-            <input id="resultado-nps" type="textbox" block class="double-column" value="" size="5" >
+            <input id="resultado-nps" type="textbox" block class="double-column" value="" size="5" readonly>
 
             <p class="text-white double-column">ZONA:</p>
-            <input type="textbox" class="double-column" value="" size="28">
+            <input id="resultados-zona" type="textbox" class="double-column" value="" size="28" readonly>
         </section>
 
 
