@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
 body {
     background-color: #D5F3E7;
-    font-family: 'Oswald', sans-serif;
     margin: auto;
 }
 
@@ -99,7 +103,8 @@ label[for="cbMeta"] {
 }
 
 #meta-values {
-    display: none;
+    display: flex;
+    visibility: hidden;
     /* TODO: ao clicar no checkbox, alterar para flex */
     width: 100%;
     justify-content: space-around;
@@ -119,3 +124,5 @@ footer {
     justify-content: space-around;
     align-items: center;
 }
+
+.resultados {}
