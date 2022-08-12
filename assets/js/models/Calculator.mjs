@@ -6,10 +6,9 @@ export class Calculator {
         this._total = this._promotors + this._passives + this._detractors
     }
 
-    getNps = () => Number.parseFloat(
-        ((this._promotors - this._detractors) / this._total * 100)
+    getNps = () =>((this._promotors - this._detractors) / this._total * 100)
             .toFixed(2)
-    )
+
 
     getTotal = () => this._total
 
