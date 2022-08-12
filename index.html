@@ -1,6 +1,8 @@
 <html>
 
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title> Calculadora NPS - Calcule suas notas! </title>
@@ -8,76 +10,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
 
-    <script type="text/javascript" src="./assets/js/script.js"></script>
 </head>
 
 <body>
-    <!--
-        Estrutura:
-            -Cabeçalho
-            -Bloco esquerdo
-            -BLoco direito
-            -BLoco infeior
-            -Rodapé
-    -->
-
-    <!--Cabeçalho-->
     <header class="cabecalho">
         <h1>Calculadora - NPS!</h1>
     </header>
 
-    <div class="container">
+    <main class="container">
 
-        <!--Bloco esquerdo (Notas)-->
-        <div class="box">
+        <section class="box">
             <h2 class="titleBox">Digite suas notas</h2>
 
             <p class="text-white double-column">Detratoras:</p>
-            <input type="textbox" class=" caixaDET double-column" value="0" size="5">
+            <input id="input-detrator" type="number" class=double-column" value="0" size="5">
 
             <p class="text-white double-column">Neutras:</p>
-            <input type="textbox" class=" caixaNEUT double-column" value="0" size="5">
+            <input id="input-neutro" type="number" class="double-column" value="0" size="5">
 
             <p class="text-white double-column">Promotoras:</p>
-            <input type="textbox" class=" caixaPRO double-column" value="0" size="5">
+            <input id="input-promotor" type="number" class="double-column" value="0" size="5">
 
             <input type="button" value="Calcular" id="btCalcular">
-        </div>
-
-        <!--Bloco direito (Meta)-->
-
-        <div class="box">
-
-            <label for="cbMeta" class="text-white">
-                <input type="checkbox" id="cbMeta">
-                <span class="text-white">Calcular meta?</span>
-            </label>
-
-            <p class="text-white double-column">META:</p>
-            <input type="textbox" class="" value="" size="5">
-
-        </div>
+        </section>
 
 
         <!--Bloco inferior (Resultados)-->
 
-        <div class="box">
+        <section class="box resultados">
+            <h2 class="titleBox">Resultados</h2>
 
             <p class="text-white double-column">Total:</p>
-            <input type="textbox" class="double-column" value="" size="5">
+            <input id="resultados-total" type="textbox" class="double-column" value="" size="5" readonly>
 
             <p class="text-white double-column">NPS:</p>
-            <input type="textbox" class="double-column" value="" size="5">
+            <input id="resultado-nps" type="textbox" block class="double-column" value="" size="5" readonly>
 
             <p class="text-white double-column">ZONA:</p>
-            <input type="textbox" class="double-column" value="" size="28">
-        </div>
-    </div>
+            <input id="resultados-zona" type="textbox" class="double-column" value="" size="28" readonly>
+        </section>
 
-    <!--Rodapé-->
-    <footer>
-        <p>v 0.1</p>
-    </footer>
+
+        <!--Rodapé-->
+        <footer>
+            <p>&copy;</p>
+            <p>Desenvolvido por: Luiz Felipe Tôrres</p>
+            <p>v 0.1</p>
+        </footer>
 </body>
+<script type="module" src="./assets/js/script.mjs"></script>
 
 </html>

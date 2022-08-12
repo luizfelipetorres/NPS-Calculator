@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
 body {
     background-color: #D5F3E7;
-    font-family: 'Oswald', sans-serif;
     margin: auto;
 }
+
 
 .cabecalho {
     display: flex;
@@ -42,17 +47,19 @@ body {
     box-shadow: 1px 1px 10px black;
 }
 
-.box .titleBox {
+.titleBox {
     color: white;
     font-size: 20px;
     margin-bottom: 15px;
-
+    width: 100%;
+    text-align: center;
 }
 
 .text-white {
     color: white;
 }
 
+input[type="number"],
 input[type="textbox"] {
     width: 45%;
     height: 20px;
@@ -86,7 +93,6 @@ label[for="cbMeta"] {
 
 .box #btCalcular:hover {
     border: 3px solid #254E70;
-
 }
 
 .ckbox {
@@ -96,12 +102,27 @@ label[for="cbMeta"] {
     max-width: 25px;
 }
 
+#meta-values {
+    display: flex;
+    visibility: hidden;
+    /* TODO: ao clicar no checkbox, alterar para flex */
+    width: 100%;
+    justify-content: space-around;
+}
+
 footer {
     position: fixed;
+    display: flex;
+    left: 0;
     bottom: 0;
-    text-align: center;
     width: 100%;
-
+    min-height: 5%;
     color: white;
     background-color: #254E70;
+    margin: 0;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
 }
+
+.resultados {}
