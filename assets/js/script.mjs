@@ -20,6 +20,7 @@ detrator.addEventListener('focusin', function () { clearValues(detrator) })
 neutro.addEventListener('focusin', function () { clearValues(neutro) })
 promotor.addEventListener('focusin', function () { clearValues(promotor) })
 btCalcular.addEventListener('click', () => calcular())
+checkboxMeta.addEventListener('change', _ => showMeta())
 
 function clearValues(obj) {
     obj.value == 0 ? obj.value = '' : ''
