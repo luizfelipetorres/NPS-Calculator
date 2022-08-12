@@ -47,12 +47,3 @@ function calcular() {
         alert(e)
     }
 }
-
-function showMeta() {
-    if (checkboxMeta.checked)
-        sectionMeta.style.visibility = 'visible'
-    else {
-        sectionMeta.style.visibility = 'hidden'
-        sectionMeta.getElementsByTagName('input')[0].value = ''
-    }
-}
