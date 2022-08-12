@@ -35,19 +35,10 @@ function inserirResultados(total, nps, zone) {
     fieldZona.style.color = cor
 }
 
-function hasError() {
-
-    if (!detrator.value || !neutro.value || !promotor.value)
-        throw new Error("Todos os campos precisam ser preenchidos")
-
-    else if (detrator.value === '0' && neutro.value === '0' && promotor.value === '0')
-        throw new Error("Usuário sem notas! NPS não será calculado")
-}
 
 function calcular() {
 
     try {
-        hasError()
         let calc = new Calculator(promotor.value, neutro.value, detrator.value)
         inserirResultados(calc.getTotal(), calc.getNps(), calc.getZone())
         console.log(calc.getNps())
