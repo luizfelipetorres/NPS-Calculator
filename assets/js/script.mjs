@@ -15,10 +15,18 @@ const fieldNps = document.getElementById('resultado-nps')
 const fieldTotal = document.getElementById('resultados-total')
 const fieldZona = document.getElementById('resultados-zona')
 
+let elements = [detrator, neutro, promotor]
 
-detrator.addEventListener('focusin', function () { clearValues(detrator) })
-neutro.addEventListener('focusin', function () { clearValues(neutro) })
-promotor.addEventListener('focusin', function () { clearValues(promotor) })
+elements.forEach(element => {
+    element.addEventListener('focusin', function () { clearValues(element) })
+    element.addEventListener('change', function () {
+        if (element.value < 0) {
+            alert("Valores menores que zero não são permitidos")
+            element.value = 0
+        }
+    });
+});
+
 btCalcular.addEventListener('click', () => calcular())
 
 function clearValues(obj) {
@@ -34,7 +42,6 @@ function inserirResultados(total, nps, zone) {
     fieldZona.setAttribute('value', zona)
     fieldZona.style.color = cor
 }
-
 
 function calcular() {
 
