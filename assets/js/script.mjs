@@ -15,10 +15,18 @@ const fieldNps = document.getElementById('resultado-nps')
 const fieldTotal = document.getElementById('resultados-total')
 const fieldZona = document.getElementById('resultados-zona')
 
+let elements = [detrator, neutro, promotor]
 
-detrator.addEventListener('focusin', function () { clearValues(detrator) })
-neutro.addEventListener('focusin', function () { clearValues(neutro) })
-promotor.addEventListener('focusin', function () { clearValues(promotor) })
+elements.forEach(element => {
+    element.addEventListener('focusin', function () { clearValues(element) })
+    element.addEventListener('change', function () {
+        if (element.value < 0) {
+            alert("Valores menores que zero não são permitidos")
+            element.value = 0
+        }
+    });
+});
+
 btCalcular.addEventListener('click', () => calcular())
 checkboxMeta.addEventListener('change', _ => showMeta())
 
@@ -36,7 +44,6 @@ function inserirResultados(total, nps, zone) {
     fieldZona.style.color = cor
 }
 
-
 function calcular() {
 
     try {
@@ -46,14 +53,5 @@ function calcular() {
 
     } catch (e) {
         alert(e)
-    }
-}
-
-function showMeta() {
-    if (checkboxMeta.checked)
-        sectionMeta.style.visibility = 'visible'
-    else {
-        sectionMeta.style.visibility = 'hidden'
-        sectionMeta.getElementsByTagName('input')[0].value = ''
     }
 }
