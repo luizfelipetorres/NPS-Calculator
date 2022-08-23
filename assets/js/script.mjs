@@ -28,6 +28,7 @@ elements.forEach(element => {
 });
 
 btCalcular.addEventListener('click', () => calcular())
+checkboxMeta.addEventListener('change', _ => showMeta())
 
 function clearValues(obj) {
     obj.value == 0 ? obj.value = '' : ''
